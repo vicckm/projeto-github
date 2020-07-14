@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./srcs/assets/css/reset.css">
+    <link rel="stylesheet" href="./srcs/assets/css/style.css">
+    <title>Projeto GitHub</title>
+</head>
+<body>
+    <div class="container">
+        <form id="form">
+            <label for="inputUsername">Digite o nome do usuário no GitHub:</label>
+            <input type="text" id="inputUsername" name="inputUsername">
+            <button type="submit" id="botaoPesquisar">Pesquisar</button>
+        </form>
+
+        <main>
+            <div id="usuario"></div>
+        </main>
+    </div>
+</body>
+<script defer src="./srcs/models/Usuario.js"></script>
+<script defer src="./srcs/views/UsuarioView.js"></script>
+<script defer src="./srcs/controllers/UsuarioController.js"></script>
+<script defer src="./srcs/assets/js/main.js"></script>
+</html>
