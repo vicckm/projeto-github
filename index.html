@@ -4,21 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./srcs/assets/css/reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./srcs/assets/css/style.css">
     <title>Projeto GitHub</title>
 </head>
 <body>
-    <div class="container">
-        <form id="form">
-            <label for="inputUsername">Digite o nome do usuário no GitHub:</label>
-            <input type="text" id="inputUsername" name="inputUsername">
-            <button type="submit" id="botaoPesquisar">Pesquisar</button>
-        </form>
+    <header class="header">
+        <div class="logo-header">
+            <a href="index.html">
+                <img class="logo" src="./srcs/assets/img/logo.png" alt="Logo da empresa GitHub">
+            </a>
+            <h1 class="titulo">GitHub Search</h1>
+        </div>
+        <div class="form-header">
+            <img class="search" src="./srcs/assets/img/search.png" alt="Objeto lupa">
+            <form id="form">
+                <input type="text" id="inputUser" name="inputUser" placeholder="Nome do usuário">
+                <button type="submit" id="botaoPesquisar">Pesquisar</button>
+            </form>
+        </div>
+    </header>
+    <main>
+        <p class="introducao">Quer saber sobre algum usuário do GitHub? Pesquise aqui!</p>
 
-        <main>
-            <div id="usuario"></div>
-        </main>
-    </div>
+        <div class="imagemLogo">
+            <img class="femLogo" src="./srcs/assets/img/femLogo.png" alt="Logo feminina GitHub">
+        </div>
+
+        <div class="container">
+            <div class="usuario" id="usuario"></div>
+
+            <div class="repositorio" id="repositorio"></div>
+        </div>
+       
+    
+    </main>
+    <footer>
+        <p id="copy">Feito com <span class=""><img src="./srcs/assets/img/coracao.png" alt="Um coração"></span> pela Victoria Marques</p>
+    </footer>
 </body>
 <script defer src="./srcs/models/Usuario.js"></script>
 <script defer src="./srcs/views/UsuarioView.js"></script>

@@ -1,6 +1,8 @@
+let inputUser = document.getElementById("inputUser");
 let botaoPesquisar = document.getElementById("botaoPesquisar");
 let form = document.getElementById("form");
-
-//let usuarioUm = new Usuario(123, "Vic", null, null,null,null);
+let paragrafo = document.querySelector(".introducao");
+let imagemLogo = document.querySelector(".imagemLogo");
 
 botaoPesquisar.onclick = UsuarioController.geraUsuario;
+

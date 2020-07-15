@@ -4,25 +4,26 @@ class UsuarioController {
     static geraUsuario(){
         let reqGitHub = new XMLHttpRequest();
 
-        reqGitHub.open("GET", "https://api.github.com/users/Felipe-Streva");
+        reqGitHub.open("GET", `https://api.github.com/users/${inputUser.value}`);
 
         form.addEventListener("click", (event) => {
             event.preventDefault();
-           
+            inputUser.value = "";
            
             reqGitHub.onload = () => {
                 try {
                     if(reqGitHub.status !== 200) { throw new Error("Não foi possível realizar a requisição.")} 
-                
+                    
                     let divUsuario = document.getElementById("usuario");
+                    let viewUsuario = new UsuarioView();
                     let reqParse = JSON.parse(reqGitHub.responseText);
 
                     let usuarioGit = {
                         id: reqParse.id,
                         nome: reqParse.name || "O usuário não preencheu esse dado.",
+                        avatar: reqParse.avatar_url,
                         bio: reqParse.bio || "O usuário não preencheu esse dado.",
                         blog: reqParse.blog || "O usuário não preencheu esse dado.",
-                        avatar: reqParse.avatar_url,
                         email: reqParse.email || "O usuário não preencheu esse dado."  
                     }
             
@@ -34,7 +35,10 @@ class UsuarioController {
                             usuarioGit.blog,
                             usuarioGit.email
                         );
-                    console.log(montaUsuario)
+
+                    paragrafo.classList.add("tiraIntroducao");
+                    imagemLogo.classList.add("tiraIntroducao");
+                    divUsuario.innerHTML = viewUsuario.template(montaUsuario.retornaUsuario);
                 }
 
                 catch(erro){
