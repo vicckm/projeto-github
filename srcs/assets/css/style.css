@@ -99,11 +99,33 @@ main {
     width: 80%;
     margin: 0 auto;
     display: flex;
+    justify-content: center;
+
+}
+
+.usuario {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
 }
 
 .avatarGit {
     border-radius: 50%;
     width: 300px;
+    margin-bottom: 15px;
+}
+
+.descricaoUsuario {
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+
+.descricaoUsuario p {
+    margin-bottom: 8px;
+}
+
+.spanUsuario {
+    font-weight: bold;
 }
 
 
@@ -159,6 +181,16 @@ footer {
     .femLogo{
         width: 350px;
     
+    }
+
+    .usuario {
+        flex-direction: column;
+    }
+
+    .descricaoUsuario {
+        margin-left: 0;
+        margin-top: 20px;
+        
     }
 }
 

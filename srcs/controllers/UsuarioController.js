@@ -19,21 +19,21 @@ class UsuarioController {
                     let reqParse = JSON.parse(reqGitHub.responseText);
 
                     let usuarioGit = {
-                        id: reqParse.id,
+                        login: reqParse.login,
                         nome: reqParse.name || "O usuário não preencheu esse dado.",
                         avatar: reqParse.avatar_url,
                         bio: reqParse.bio || "O usuário não preencheu esse dado.",
-                        blog: reqParse.blog || "O usuário não preencheu esse dado.",
-                        email: reqParse.email || "O usuário não preencheu esse dado."  
+                        email: reqParse.email || "O usuário não preencheu esse dado.",
+                        repos: reqParse.public_repos 
                     }
             
                     let montaUsuario = new Usuario(
-                            usuarioGit.id, 
+                            usuarioGit.login, 
                             usuarioGit.nome, 
                             usuarioGit.avatar, 
-                            usuarioGit.bio, 
-                            usuarioGit.blog,
-                            usuarioGit.email
+                            usuarioGit.bio,
+                            usuarioGit.email,
+                            usuarioGit.repos
                         );
 
                     paragrafo.classList.add("tiraIntroducao");

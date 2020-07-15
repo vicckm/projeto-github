@@ -1,21 +1,21 @@
 class Usuario {
-    constructor(id, nome, avatar, bio, blog, email){
-        this._id = id;
+    constructor(login, nome, avatar, bio, email,repos){
+        this._login = login;
         this._nome = nome;
         this._avatar = avatar;
         this._bio = bio;
-        this._blog = blog;
         this._email = email;
+        this._repos = repos;
     }
 
     _retornaUsuario(){
         return {
-            id: this._id,
+            login: this._login,
             nome: this._nome,
             avatar: this._avatar,
             bio: this._bio,
-            blog: this._blog,
-            email: this._email
+            email: this._email,
+            repos: this._repos
         }
     }
 
