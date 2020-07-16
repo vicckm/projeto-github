@@ -1,9 +1,8 @@
-* {
-    box-sizing: border-box;
-}
-
 body {
+    height: 100vh;
     font-family: 'Noto Sans JP', sans-serif;
+    height: 100vh;
+    box-sizing: border-box;
 }
 
 /* Header */
@@ -12,7 +11,7 @@ body {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 80px;
+    height: 10vh;
     background-color: black;
 }
 
@@ -71,7 +70,7 @@ body {
     font-weight: 300; 
 }
 
-.tiraIntroducao {
+.invisivel {
     display: none;
     width: 0;
     height: 0;
@@ -82,7 +81,7 @@ body {
 main { 
     padding-top: 40px;
     background-color: #ebebeb;
-    height: 90vh;
+    height: 100vh;
     width: 100%;
 }
 
@@ -96,16 +95,15 @@ main {
 }
 
 .container {
+    height: 100%;
     width: 80%;
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
-
 }
 
 .usuario {
     display: flex;
     align-items: center;
+    justify-content: center;
     border-bottom: 1px solid black;
 }
 
@@ -128,6 +126,19 @@ main {
     font-weight: bold;
 }
 
+.repositorio {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+.repositorios {
+    width: 200px;
+    padding: 40px;
+    margin: 10px;
+    border: 2px solid black;
+}
+
 
 /* Footer */
 
@@ -136,7 +147,7 @@ footer {
     width: 100%;
     padding: 20px;
     bottom: 0;
-    height: 80px;
+    height: 50px;
     background-color: black;
     color: white;
     display: flex;
@@ -172,6 +183,8 @@ footer {
     #form button {
         margin-right: 0;
     }
+
+    
 
     .introducao {
         font-size: 45px;

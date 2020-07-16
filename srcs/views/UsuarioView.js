@@ -3,7 +3,7 @@ class UsuarioView {
     template(usuario){
         return ` 
             
-        <div class="usuario" id="usuario">
+    
             <img class="avatarGit" src="${usuario.avatar}">
 
             <div class="descricaoUsuario">
@@ -13,7 +13,7 @@ class UsuarioView {
                 <p><span class="spanUsuario">E-mail:</span>  ${usuario.email}</p>
                 <p><span class="spanUsuario">Repositório:</span>  ${usuario.repos}</p>
             </div>
-        </div>
+       
                     
             
               
