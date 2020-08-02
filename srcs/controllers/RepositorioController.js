@@ -1,36 +1,35 @@
 class RepositorioController {
-    constructor() { throw new Error("Operação inválida") }
+  constructor() {
+    throw new Error("Operação inválida");
+  }
 
-    static geraRepositorio(urlRepositorio){
-        let reqGitRepos = new XMLHttpRequest();
-        let divRepositorio = document.getElementById("repositorio");
-        
+  static geraRepositorio(urlRepositorio) {
+    let divRepositorio = document.getElementById("repositorio");
+    divRepositorio.innerHTML = "";
 
-        reqGitRepos.open("GET", urlRepositorio);
+    let reqGitRepos = new XMLHttpRequest();
 
-        reqGitRepos.onload = () => {
-            try {
-                divRepositorio.innerHTML = "";
-                if(reqGitRepos.status !== 200) { throw new Error("Não foi possível realizar a requisição.2")} 
-                
-                let viewRepositorio = new RepositorioView();
-                let reqParseRepos = JSON.parse(reqGitRepos.responseText);
+    reqGitRepos.open("GET", urlRepositorio);
 
+    reqGitRepos.onload = () => {
+      if (reqGitRepos.status !== 200) {
+        throw new Error("Não foi possível realizar a requisição.");
+      }
 
-                for(let i = 0; i < reqParseRepos.length; i++){
-                    let repositorios = new Repositorio(reqParseRepos[i].name, reqParseRepos[i].html_url);
-                    divRepositorio.innerHTML += viewRepositorio.template(repositorios.retornaRepositorio);
-                }
-            }
+      let viewRepositorio = new RepositorioView();
+      let reqParseRepos = JSON.parse(reqGitRepos.responseText);
 
-            catch(erro){
-                // para não esquecer: adiciona uma mensagem abaixo do form mostrando a mensagem do erro
-                console.log(erro)
-            }
-            
-        }
+      for (let i = 0; i < reqParseRepos.length; i++) {
+        let repositorios = new Repositorio(
+          reqParseRepos[i].name,
+          reqParseRepos[i].html_url
+        );
+        divRepositorio.innerHTML += viewRepositorio.template(
+          repositorios.retornaRepositorio
+        );
+      }
+    };
 
-        reqGitRepos.send();
-    }
-
+    reqGitRepos.send();
+  }
 }

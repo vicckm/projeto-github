@@ -1,54 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./srcs/assets/css/reset.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./srcs/assets/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./srcs/assets/css/reset.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./srcs/assets/css/style.css" />
     <title>Projeto GitHub</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="header">
-        <div class="logo-header">
-            <a href="index.html">
-                <img class="logo" src="./srcs/assets/img/logo.png" alt="Logo da empresa GitHub">
-            </a>
-            <h1 class="titulo">GitHub Search</h1>
-        </div>
-        <div class="form-header">
-            <img class="search" src="./srcs/assets/img/search.png" alt="Objeto lupa">
-            <form id="form">
-                <input type="text" id="inputUser" name="inputUser" placeholder="Nome do usuário">
-                <button type="submit" id="botaoPesquisar">Pesquisar</button>
-            </form>
-        </div>
+      <div class="logo-header">
+        <a href="index.html">
+          <img
+            class="logo"
+            src="./srcs/assets/img/logo.png"
+            alt="Logo da empresa GitHub"
+          />
+        </a>
+        <h1 class="titulo">GitHub Search</h1>
+      </div>
+      <div class="form-header">
+        <img
+          class="search"
+          src="./srcs/assets/img/search.png"
+          alt="Objeto lupa"
+        />
+        <form id="form">
+          <input
+            type="text"
+            id="inputUser"
+            name="inputUser"
+            placeholder="Nome do usuário"
+          />
+          <button type="submit" id="botaoPesquisar">Pesquisar</button>
+        </form>
+      </div>
     </header>
-    <main>
-        <p class="introducao">Quer saber sobre algum usuário do GitHub? Pesquise aqui!</p>
+    <main class="main">
+      <p class="texto-erro mensagemErro invisivel">
+        Não foi possível encontrar esse usuário. Tente novamente :)
+      </p>
+      <p class="introducao">
+        Quer saber sobre algum usuário do GitHub? Pesquise aqui!
+      </p>
 
-        <div class="imagemLogo">
-            <img class="femLogo" src="./srcs/assets/img/femLogo.png" alt="Logo feminina GitHub">
-        </div>
+      <div class="imagemLogo">
+        <img
+          class="femLogo"
+          src="./srcs/assets/img/femLogo.png"
+          alt="Logo feminina GitHub"
+        />
+      </div>
 
-        <div class="container invisivel">
-            <div class="usuario " id="usuario"></div>
+      <div class="container-usuario invisivel">
+        <div class="usuario" id="usuario"></div>
 
-            <div class="repositorio " id="repositorio"></div>
-        </div>
-       
-    
+        <div class="repositorio" id="repositorio"></div>
+      </div>
     </main>
-    <footer>
-        <p id="copy">Feito com <span class=""><img src="./srcs/assets/img/coracao.png" alt="Um coração"></span> pela Victoria Marques</p>
-    </footer>
-</body>
-<script defer src="./srcs/models/Usuario.js"></script>
-<script defer src="./srcs/models/Repositorio.js"></script>
-<script defer src="./srcs/views/RepositorioView.js"></script>
-<script defer src="./srcs/views/UsuarioView.js"></script>
-<script defer src="./srcs/controllers/RepositorioController.js"></script>
-<script defer src="./srcs/controllers/UsuarioController.js"></script>
-<script defer src="./srcs/assets/js/main.js"></script>
+  </body>
+  <script defer src="./srcs/models/Usuario.js"></script>
+  <script defer src="./srcs/models/Repositorio.js"></script>
+  <script defer src="./srcs/views/RepositorioView.js"></script>
+  <script defer src="./srcs/views/UsuarioView.js"></script>
+  <script defer src="./srcs/controllers/RepositorioController.js"></script>
+  <script defer src="./srcs/controllers/UsuarioController.js"></script>
+  <script defer src="./srcs/assets/js/main.js"></script>
 </html>

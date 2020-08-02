@@ -1,7 +1,6 @@
 class RepositorioView {
-
-    template(repositorio){
-        return ` 
+  template(repositorio) {
+    return ` 
             <div class="repositorios">
                 <a href="${repositorio.url}" target="blank">${repositorio.nome}</a
             </div>
@@ -11,7 +10,7 @@ class RepositorioView {
               
             
         `;
-    }
+  }
 }
 
 // ajeitar a:visited

@@ -1,212 +1,240 @@
+* {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
 body {
-    height: 100vh;
-    font-family: 'Noto Sans JP', sans-serif;
-    height: 100vh;
-    box-sizing: border-box;
+  height: 100vh;
 }
 
 /* Header */
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 10vh;
-    background-color: black;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 0;
+  background-color: black;
 }
 
 .logo-header {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .logo {
-    width: 64px;
-    height: 64px;
-    margin-left: 20px;
+  width: 64px;
+  height: 64px;
+  margin-left: 20px;
 }
 
 .titulo {
-    color:white;
-    margin-left: 10px;
-    font-size: 24px;
+  color: white;
+  margin-left: 10px;
+  font-size: 24px;
 }
 
 .form-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .search {
-    width: 35px;
-    height: 35px;
+  width: 35px;
+  height: 35px;
 }
 
 #form input {
-    margin-left: 10px;
-    outline: none;
-    border: 2px solid white;
-    border-radius: 8px;
-    padding: 5px;
+  margin-left: 10px;
+  outline: none;
+  border: 2px solid white;
+  border-radius: 8px;
+  padding: 5px;
 }
 
 #form button {
-    margin-right: 20px;
-    margin-left: 3px;
-    border: 2px solid white;
-    background: black;
-    border-radius: 8px;
-    padding: 5px;
-    color: white;
-    outline: none;
+  margin-right: 20px;
+  margin-left: 3px;
+  border: 2px solid white;
+  background: black;
+  border-radius: 8px;
+  padding: 5px;
+  color: white;
+  outline: none;
 }
 
 /* Introdução */
 
 .introducao {
-    text-align: center;
-    font-size: 36px;
-    font-weight: 300; 
+  text-align: center;
+  font-size: 36px;
+  font-weight: 300;
+  margin-bottom: 60px;
 }
 
 .invisivel {
-    display: none;
-    width: 0;
-    height: 0;
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 /* Conteúdo */
 
-main { 
-    padding-top: 40px;
-    background-color: #ebebeb;
-    height: 100vh;
-    width: 100%;
+.main {
+  padding-top: 40px;
+  width: 100%;
 }
 
 .imagemLogo {
-    text-align: center;
-    margin-top: 30px;
+  text-align: center;
+  margin-top: 30px;
 }
 
 .femLogo {
-    width: 700px;
+  width: 700px;
 }
 
 .container {
-    height: 100%;
-    width: 80%;
-    margin: 0 auto;
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .usuario {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid black;
 }
 
 .avatarGit {
-    border-radius: 50%;
-    width: 300px;
-    margin-bottom: 15px;
+  border: 3px solid #000000;
+  border-radius: 50%;
+  width: 300px;
+  margin-bottom: 15px;
 }
 
 .descricaoUsuario {
-    margin-left: 30px;
-    margin-bottom: 15px;
+  margin-left: 30px;
+  margin-bottom: 15px;
 }
 
 .descricaoUsuario p {
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .spanUsuario {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .repositorio {
-    display: flex;
-    flex-wrap: wrap;
-    height: auto;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .repositorios {
-    width: 200px;
-    padding: 40px;
-    margin: 10px;
-    border: 2px solid black;
+  width: 200px;
+  padding: 40px;
+  margin: 10px;
+  border: 2px solid black;
+  text-align: center;
 }
 
-
-/* Footer */
-
-footer {
-    position: fixed;
-    width: 100%;
-    padding: 20px;
-    bottom: 0;
-    height: 50px;
-    background-color: black;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
+.repositorios:last-child {
+  margin-bottom: 20px;
 }
 
+.repositorios a {
+  word-break: break-all;
+  padding: 0;
+  color: black;
+  text-decoration: none;
+}
+
+.repositorios a:hover {
+  text-decoration: underline;
+}
+
+.repositorios a:visited {
+  color: black;
+}
+
+/* Erro */
+
+.texto-erro {
+  color: red;
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
 
 /* Responsivo */
 
 @media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+    align-items: center;
+  }
 
-    .header {
-        flex-direction: column;
-        height: auto;
-        padding: 10px 0;
-        align-items: center;
-    }
+  .logo-header {
+    margin-bottom: 5px;
+  }
 
-    .logo-header {
-        margin-bottom: 5px;
-    }
+  .logo {
+    margin-left: 0;
+  }
 
-    .logo {
-        margin-left: 0;
-    }
+  .titulo {
+    font-size: 22px;
+  }
 
-    .titulo {
-        font-size: 16px;
-    }
+  #form button {
+    margin-right: 0;
+  }
 
-    #form button {
-        margin-right: 0;
-    }
+  .introducao {
+    font-size: 45px;
+    line-height: 50px;
+  }
 
-    
+  .femLogo {
+    width: 350px;
+  }
 
-    .introducao {
-        font-size: 45px;
-        line-height: 50px;
-    }
+  .usuario {
+    flex-direction: column;
+  }
 
-    .femLogo{
-        width: 350px;
-    
-    }
-
-    .usuario {
-        flex-direction: column;
-    }
-
-    .descricaoUsuario {
-        margin-left: 0;
-        margin-top: 20px;
-        
-    }
+  .descricaoUsuario {
+    margin-left: 0;
+    margin-top: 20px;
+  }
 }
 
+@media (max-width: 576px) {
+  .introducao {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .femLogo {
+    width: 200px;
+  }
 
+  #form input {
+    width: 130px;
+  }
 
-
+  .avatarGit {
+    width: 200px;
+  }
+  .titulo {
+    font-size: 18px;
+  }
+  .descricaoUsuario {
+    margin: 0 20px;
+  }
+}

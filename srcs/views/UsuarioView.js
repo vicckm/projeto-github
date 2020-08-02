@@ -1,7 +1,6 @@
 class UsuarioView {
-
-    template(usuario){
-        return ` 
+  template(usuario) {
+    return ` 
             
     
             <img class="avatarGit" src="${usuario.avatar}">
@@ -19,5 +18,5 @@ class UsuarioView {
               
             
         `;
-    }
+  }
 }
