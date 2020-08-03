@@ -21,10 +21,10 @@ class UsuarioController {
 
         let usuarioGit = {
           login: reqParse.login,
-          nome: reqParse.name || "O usuário não preencheu esse dado",
+          nome: reqParse.name || "Não informado",
           avatar: reqParse.avatar_url,
-          bio: reqParse.bio || "O usuário não preencheu esse dado",
-          email: reqParse.email || "O usuário não preencheu esse dado",
+          bio: reqParse.bio || "Não informado",
+          email: reqParse.email || "Não informado",
           repos: reqParse.public_repos,
         };
 
