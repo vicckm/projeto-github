@@ -142,10 +142,6 @@ body {
   text-align: center;
 }
 
-.repositorios:last-child {
-  margin-bottom: 20px;
-}
-
 .repositorios a {
   word-break: break-all;
   padding: 0;
@@ -213,6 +209,10 @@ body {
     margin-left: 0;
     margin-top: 20px;
   }
+
+  .repositorios:last-child {
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -236,5 +236,9 @@ body {
   }
   .descricaoUsuario {
     margin: 0 20px;
+  }
+
+  .repositorios:last-child {
+    margin-bottom: 20px;
   }
 }
