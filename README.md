@@ -10,3 +10,6 @@
  1. HTML
  2. CSS
  3. Vanilla Javascript
+
+#### Observação: 
+Caso encontre algum bug que tenha passado despercebido, fique a vontade em fazer pull request :)
